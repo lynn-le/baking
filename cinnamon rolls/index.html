@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinnamon Rolls | The Baking Adventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Caveat:wght@500;600;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../recipe-engine.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page-shell">
+      <main class="page-content">
+        <header class="top-bar">
+          <span class="brand">The Baking Adventures</span>
+          <span>Adventure No. 1 - Cinnamon Roll Redux</span>
+        </header>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Breads &amp; Buns</div>
+            <h1>Cinnamon<br>Rolls</h1>
+            <p class="intro">
+              Pillowy enriched dough, a generous cinnamon-sugar spiral, and a tangy cream cheese finish.
+              Based on <a href="https://bromabakery.com/homemade-cinnamon-rolls-soft-fluffy/">this</a> 
+              recipe!
+            </p>
+            <dl class="recipe-meta">
+              <div><dt>Yield</dt><dd id="yield-label">12 rolls</dd></div>
+              <div><dt>Time</dt><dd>2 hr 30</dd></div>
+              <div><dt>Level</dt><dd>Intermediate</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <figure class="photo-card hero-photo-card">
+              <span class="tape" aria-hidden="true"></span>
+              <img class="hero-image" src="./noIcing.jpeg" alt="Fresh cinnamon rolls">
+              <figcaption>fresh out of the oven ♥</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="recipe-layout">
+          <section class="ingredients">
+            <div class="section-heading ingredients-heading">
+              <h2>Ingredients</h2>
+              <div class="scaler" aria-label="Adjust servings">
+                <button class="scale-button scale-down" id="decrease-servings" type="button" aria-label="Decrease servings">−</button>
+                <span class="serving-count" id="serving-count">12</span>
+                <button class="scale-button scale-up" id="increase-servings" type="button" aria-label="Increase servings">+</button>
+              </div>
+            </div>
+
+            <div class="ingredient-controls">
+              <div class="unit-tabs">
+                <button id="unit-us" type="button" class="unit-tab is-active">US / Imperial</button>
+                <button id="unit-metric" type="button" class="unit-tab">Metric</button>
+              </div>
+              <button class="reset-button" id="reset-servings" type="button">reset</button>
+            </div>
+            <p class="unit-hint">Click any measured ingredient to switch just that row between US and metric.</p>
+
+            <div id="ingredient-list"></div>
+          </section>
+
+          <section class="method">
+            <div class="section-heading method-heading">
+              <h2>Method</h2>
+              <span class="progress-label" id="progress-label">0 / 11 done</span>
+            </div>
+
+            <div id="method-steps"></div>
+
+            <aside class="notes">
+              <h2>Notes for next time</h2>
+              <p>
+                Didn't take enough pictures, RIP. Have to figure out how to roll out the dough more evenly. I also ended
+                up adding half of the butter for the filling, which I have to fix next time. Sugar levels are good for
+                the frosting, I think. I also cut this into 10 rolls, but ideally should be 12. Maybe more cinnamon as well?
+              </p>
+            </aside>
+          </section>
+        </div>
+      </main>
+    </div>
+</body>
+</html>
