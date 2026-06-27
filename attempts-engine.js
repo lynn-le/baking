@@ -23,11 +23,11 @@
     return '\u2605'.repeat(r) + '\u2606'.repeat(5 - r);
   }
 
-  function photoNode(attempt, heightClass) {
+  function photoNode(attempt, heightClass, recipeName) {
     if (attempt.photo) {
       const img = el('img');
       img.src = attempt.photo;
-      img.alt = 'Cinnamon rolls — attempt ' + attempt.badge;
+      img.alt = recipeName + ' — ' + (attempt.label || 'attempt ' + attempt.badge);
       img.loading = 'lazy';
       return img;
     }
@@ -107,7 +107,7 @@
       const figure = el('figure', 'photo-card is-white');
       figure.append(el('span', 'tape'));
       figure.firstChild.setAttribute('aria-hidden', 'true');
-      figure.append(photoNode(a));
+      figure.append(photoNode(a, null, recipeName));
       photoWrap.append(figure);
 
       const details = el('div', 'details');
@@ -143,7 +143,7 @@
         card.href = linkFor(a);
 
         const thumb = el('div', 'thumb');
-        thumb.append(photoNode(a));
+        thumb.append(photoNode(a, null, recipeName));
         if (a.id === latest.id) thumb.append(el('div', 'latest', 'Latest'));
         card.append(thumb);
 
