@@ -290,6 +290,10 @@ h1 {
   font: 18px "Caveat", cursive;
 }
 
+.link {
+  text-decoration: underline;
+}
+
 .ingredient-group {
   margin-bottom: 26px;
 }
