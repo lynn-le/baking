@@ -1,5 +1,5 @@
 RecipeEngine.init({
-  storageKey: 'recipe:cinnamon-rolls',
+  storageKey: 'recipe:cinnamon-rolls:attempt-1',
   legacyStorageKey: 'cr_state',
   baseServings: 12,
   servingStep: 2,

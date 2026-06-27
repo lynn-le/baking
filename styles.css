@@ -519,3 +519,766 @@ h1 {
     align-self: center;
   }
 }
+/* 
+   Navigation & gallery pages (home, category, attempts landing)
+   Shared by index.html, breads-and-buns/index.html and each
+   recipe's attempts landing (cinnamon-rolls/index.html)
+ */
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-bar a {
+  color: inherit;
+}
+
+.top-bar .brand {
+  color: #bd6444;
+}
+
+.top-bar .back-link {
+  color: #7a7363;
+}
+
+.crumb-sep {
+  margin: 0 8px;
+  color: #c9b08c;
+}
+
+.rule {
+  flex: 1;
+  height: 1.5px;
+  background: #2f2c26;
+}
+
+.rule-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 30px 0 44px;
+}
+
+.rule-text {
+  color: #bd6444;
+  font: 12px "Courier Prime", monospace;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* ---------- Home masthead + category grid ---------- */
+.masthead {
+  padding: 70px 0 30px;
+  text-align: center;
+}
+
+.masthead .kicker {
+  margin-bottom: 6px;
+  transform: rotate(-1.5deg);
+  color: #a98b3f;
+  font: 30px "Caveat", cursive;
+}
+
+.masthead h1 {
+  margin: 0 0 22px;
+  font-size: 96px;
+  line-height: 0.92;
+}
+
+.masthead .lede {
+  max-width: 54ch;
+  margin: 0 auto;
+  color: #6f6757;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.category-card {
+  display: flex;
+  gap: 22px;
+  padding: 18px;
+  border: 1px solid #e4ddca;
+  border-radius: 4px;
+  background: #faf4e6;
+  box-shadow: 0 2px 6px rgba(60, 40, 20, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(60, 40, 20, 0.14);
+}
+
+.category-card.is-empty {
+  border: 1px dashed #d8cdb2;
+  background: #f1ecdd;
+  box-shadow: none;
+}
+
+.category-cover {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.category-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-cover.is-pattern {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b3a17f;
+  font: 9px "Courier Prime", monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: repeating-linear-gradient(45deg, #e7ddc6, #e7ddc6 10px, #ede4ce 10px, #ede4ce 20px);
+}
+
+.cover-num {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 4px 8px;
+  color: #f3efdf;
+  font: 9px "Courier Prime", monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #5f6b34;
+}
+
+.category-card .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-card .meta {
+  margin-bottom: 8px;
+  color: #a98b3f;
+  font: 10.5px "Courier Prime", monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.category-card h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.category-card .desc {
+  margin: 0 0 12px;
+  color: #6f6757;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.category-card .go {
+  color: #bd6444;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.category-card.is-empty .meta {
+  color: #b3a17f;
+}
+
+.category-card.is-empty h2 {
+  color: #8c8470;
+}
+
+.category-card.is-empty .desc {
+  color: #9a9079;
+}
+
+/* ---------- Category page (recipe list) ---------- */
+.category-header {
+  padding: 54px 0 30px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.recipe-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e4ddca;
+  border-radius: 4px;
+  background: #faf4e6;
+  box-shadow: 0 2px 6px rgba(60, 40, 20, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(60, 40, 20, 0.16);
+}
+
+.recipe-card .thumb {
+  position: relative;
+  height: 200px;
+}
+
+.recipe-card .thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pill-badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 4px 9px;
+  color: #f7eedd;
+  font: 9.5px "Courier Prime", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #bd6444;
+}
+
+.recipe-card .body {
+  padding: 20px 22px 24px;
+}
+
+.recipe-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.02;
+}
+
+.recipe-card .desc {
+  margin: 0 0 14px;
+  color: #6f6757;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.recipe-card .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #e4ddca;
+  font: 10.5px "Courier Prime", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a9079;
+}
+
+.recipe-card .foot .view {
+  color: #bd6444;
+}
+
+.add-card {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 1px dashed #d8cdb2;
+  border-radius: 4px;
+  text-align: center;
+  background: #f1ecdd;
+}
+
+.add-card .plus {
+  margin-bottom: 12px;
+  color: #cdc0a3;
+  font: 40px "DM Serif Display", serif;
+  line-height: 1;
+}
+
+.add-card .scrawl {
+  color: #a98b3f;
+  font: 22px "Caveat", cursive;
+  line-height: 1.2;
+}
+
+/* ---------- Attempts landing (most recent + gallery) ---------- */
+.attempts-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 52px 0 30px;
+}
+
+.attempts-header h1 {
+  margin: 0;
+}
+
+.open-recipe {
+  flex-shrink: 0;
+  padding: 14px 22px;
+  border-radius: 999px;
+  color: #f7eedd;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  background: #bd6444;
+  transition: background 0.15s ease;
+}
+
+.open-recipe:hover {
+  background: #a85436;
+}
+
+.open-recipe small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  opacity: 0.8;
+}
+
+.section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 30px 0 26px;
+}
+
+.section-label-row.spaced {
+  margin: 54px 0 26px;
+}
+
+.section-label {
+  color: #bd6444;
+  font: 12px "Courier Prime", monospace;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.featured {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  padding: 26px;
+  border: 1px solid #e4ddca;
+  border-radius: 4px;
+  background: #faf4e6;
+  box-shadow: 0 3px 10px rgba(60, 40, 20, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(60, 40, 20, 0.16);
+}
+
+.featured-photo {
+  position: relative;
+  width: 440px;
+  flex-shrink: 0;
+  padding-top: 14px;
+}
+
+.photo-card.is-white {
+  padding: 11px 11px 14px;
+  background: #fff;
+}
+
+.featured-photo .photo-card {
+  transform: rotate(-1.5deg);
+}
+
+.featured-photo .tape {
+  transform: translateX(-50%) rotate(2deg);
+  width: 130px;
+  height: 34px;
+  background: rgba(95, 107, 52, 0.4);
+}
+
+.featured-photo img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.featured .details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.attempt-stamp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.attempt-badge {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #f3efdf;
+  font: 22px "DM Serif Display", serif;
+  background: #5f6b34;
+}
+
+.attempt-stamp .when-label {
+  color: #9a9079;
+  font: 10.5px "Courier Prime", monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.attempt-stamp .when-date {
+  font: 22px "DM Serif Display", serif;
+  line-height: 1;
+}
+
+.stars {
+  color: #c99a3f;
+  font: 13px "Courier Prime", monospace;
+  letter-spacing: 0.14em;
+}
+
+.featured .rating-line {
+  margin-bottom: 16px;
+}
+
+.featured .rating-line .tag {
+  color: #9a9079;
+  letter-spacing: 0.06em;
+}
+
+.featured .featured-note {
+  max-width: 42ch;
+  margin: 0 0 20px;
+  color: #6f6757;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.featured .open-link {
+  color: #bd6444;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* sort control */
+.sort-control {
+  position: relative;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border: 1.5px solid #2f2c26;
+  border-radius: 999px;
+  background: #faf4e6;
+  cursor: pointer;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #33302a;
+}
+
+.sort-button .lbl-key {
+  color: #a98b3f;
+}
+
+.sort-button .caret {
+  color: #bd6444;
+  font-size: 9px;
+}
+
+.sort-menu {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  z-index: 20;
+  min-width: 190px;
+  overflow: hidden;
+  border: 1.5px solid #2f2c26;
+  border-radius: 6px;
+  background: #faf4e6;
+  box-shadow: 0 12px 30px rgba(60, 40, 20, 0.2);
+}
+
+.sort-menu[hidden] {
+  display: none;
+}
+
+.sort-option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 1px solid #ece3cf;
+  background: transparent;
+  cursor: pointer;
+  font: 15px "Spectral", serif;
+  text-align: left;
+  color: #33302a;
+}
+
+.sort-option:last-child {
+  border-bottom: 0;
+}
+
+.sort-option.is-active {
+  color: #bd6444;
+  background: #efe9d8;
+}
+
+.sort-option .tick {
+  color: #bd6444;
+  font: 11px "Courier Prime", monospace;
+}
+
+.sort-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+.sort-backdrop[hidden] {
+  display: none;
+}
+
+/* attempt gallery grid */
+.attempt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.attempt-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e4ddca;
+  border-radius: 4px;
+  background: #faf4e6;
+  box-shadow: 0 2px 6px rgba(60, 40, 20, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.attempt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(60, 40, 20, 0.16);
+}
+
+.attempt-card .thumb {
+  position: relative;
+  height: 180px;
+}
+
+.attempt-card .thumb img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.attempt-card .latest {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 4px 9px;
+  color: #f3efdf;
+  font: 9.5px "Courier Prime", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #5f6b34;
+}
+
+.attempt-card .body {
+  padding: 16px 18px 20px;
+}
+
+.attempt-card .body-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.attempt-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.attempt-card .when {
+  margin-bottom: 10px;
+  color: #9a9079;
+  font: 10px "Courier Prime", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.attempt-card .note {
+  margin: 0;
+  color: #6f6757;
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* static "no photo yet" placeholder (coder-controlled, not uploadable) */
+.no-photo {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #a8916f;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #e7ddc6, #e7ddc6 10px, #ede4ce 10px, #ede4ce 20px);
+}
+
+.no-photo .np-icon {
+  font: 26px "DM Serif Display", serif;
+  opacity: 0.55;
+}
+
+.no-photo span {
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Recipe detail: per-attempt header bits ---------- */
+.attempt-tag {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.attempt-tag .cat {
+  color: #a98b3f;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.attempt-tag .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d6c2a0;
+}
+
+.attempt-tag .which {
+  color: #5f6b34;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.attempt-tag .stars {
+  font-size: 13px;
+}
+
+.attempt-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.attempt-switcher .label {
+  margin-right: 2px;
+  color: #a98b3f;
+  font: 19px "Caveat", cursive;
+}
+
+.attempt-pill {
+  padding: 6px 13px;
+  border: 1.5px solid #d9c7a8;
+  border-radius: 999px;
+  color: #7a7363;
+  font: 11px "Courier Prime", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.attempt-pill.is-active {
+  border-color: #5f6b34;
+  color: #f3efdf;
+  background: #5f6b34;
+}
+
+.hero-photo-wrap .no-photo {
+  height: 330px;
+}
+
+@media (max-width: 860px) {
+  .featured-photo {
+    width: 380px;
+  }
+}
+
+@media (max-width: 720px) {
+  .category-grid,
+  .recipe-grid,
+  .attempt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attempts-header,
+  .featured {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-photo {
+    width: 100%;
+  }
+
+  .masthead h1 {
+    font-size: 68px;
+  }
+}
