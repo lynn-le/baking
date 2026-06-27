@@ -407,6 +407,20 @@ h1 {
   gap: 18px;
 }
 
+.gallery-grid-vertical {
+  flex-direction: column;
+}
+
+.gallery-grid-vertical .gallery-card {
+  width: 100%;
+  flex: none;
+}
+
+.gallery-grid-vertical .gallery-image {
+  height: auto;
+  object-fit: contain;
+}
+
 .gallery-card {
   flex: 1;
   padding: 9px 9px 12px;

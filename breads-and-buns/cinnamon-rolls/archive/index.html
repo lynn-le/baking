@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../../../icon.png">
+  <title>Sesame Rolls · Archive 1 | The Baking Adventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Caveat:wght@500;600;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <script src="../../../recipe-engine.js" defer></script>
+  <script src="../attempts-data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="page-content">
+      <header class="top-bar">
+        <span>
+          <a class="brand" href="../../../index.html">The Baking Adventures</a>
+          <span class="crumb-sep">/</span>
+          <a class="back-link" href="../../index.html">Breads &amp; Buns</a>
+          <span class="crumb-sep">/</span>
+          Archive 1
+        </span>
+        <a class="back-link" href="../index.html">&larr; All attempts</a>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Breads &amp; Buns</div>
+          <h1>Sesame<br>Rolls</h1>
+          <p class="intro">
+            Based on <a class="link" href="https://bromabakery.com/homemade-cinnamon-rolls-soft-fluffy/">this</a>
+            recipe! An asian twist to a classic recipe.
+          </p>
+          <dl class="recipe-meta">
+            <div><dt>Yield</dt><dd id="yield-label">12 rolls</dd></div>
+            <div><dt>Time</dt><dd>2 hr 30</dd></div>
+            <div><dt>Level</dt><dd>Intermediate</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <figure class="photo-card hero-photo-card">
+            <span class="tape" aria-hidden="true"></span>
+            <img class="hero-image" src="./baked.jpeg" alt="Baked cinnamon rolls from Archive 1">
+            <figcaption>archive 1</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="recipe-layout">
+        <section class="ingredients">
+          <div class="section-heading ingredients-heading">
+            <h2>Ingredients</h2>
+            <div class="scaler" aria-label="Adjust servings">
+              <button class="scale-button scale-down" id="decrease-servings" type="button" aria-label="Decrease servings">−</button>
+              <span class="serving-count" id="serving-count">12</span>
+              <button class="scale-button scale-up" id="increase-servings" type="button" aria-label="Increase servings">+</button>
+            </div>
+          </div>
+
+          <div class="ingredient-controls">
+            <div class="unit-tabs">
+              <button id="unit-us" type="button" class="unit-tab is-active">US / Imperial</button>
+              <button id="unit-metric" type="button" class="unit-tab">Metric</button>
+            </div>
+            <button class="reset-button" id="reset-servings" type="button">reset</button>
+          </div>
+          <p class="unit-hint">Click any measured ingredient to switch just that row between US and metric.</p>
+
+          <div id="ingredient-list"></div>
+
+          <section class="gallery" aria-labelledby="archive-gallery-heading">
+            <h2 id="archive-gallery-heading">Photo gallery</h2>
+            <div class="gallery-grid gallery-grid-vertical">
+              <figure class="photo-card gallery-card gallery-card-left">
+                <img class="gallery-image" src="./prebake.jpeg" alt="Cinnamon rolls before baking" loading="lazy">
+                <figcaption>before baking</figcaption>
+              </figure>
+              <figure class="photo-card gallery-card gallery-card-right">
+                <img class="gallery-image" src="./baked.jpeg" alt="Cinnamon rolls after baking" loading="lazy">
+                <figcaption>fresh from the oven</figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+
+        <section class="method">
+          <div class="section-heading method-heading">
+            <h2>Method</h2>
+            <span class="progress-label" id="progress-label">0 / 11 done</span>
+          </div>
+
+          <div id="method-steps"></div>
+
+          <aside class="notes">
+            <h2>Archived notes</h2>
+            <p>
+              This bake predates the attempt log. Unknown date, but a few things to note. Sugar levels
+              were a little high, but people who liked sweet treats liked them/thought they were fine.
+              Otherwise fire recipe. Probably should double the filling for next time.
+          </aside>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

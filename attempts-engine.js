@@ -149,7 +149,7 @@
 
         const body = el('div', 'body');
         const top = el('div', 'body-top');
-        top.append(el('span', null, 'Attempt ' + a.badge));
+        top.append(el('span', null, a.label || 'Attempt ' + a.badge));
         top.lastChild.style.fontFamily = '"DM Serif Display", serif';
         top.lastChild.style.fontSize = '22px';
         top.append(el('span', 'stars', stars(a.rating)));
