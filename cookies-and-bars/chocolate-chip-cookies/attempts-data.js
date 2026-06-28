@@ -39,7 +39,9 @@
       ...section,
       items: section.items.map((item) =>
         item.name === 'Light brown sugar, packed'
-          ? { name: 'Dark brown sugar, packed', us: [2.25, 'tbsp'], g: 30 }
+          ? { name: 'Dark brown sugar, packed', us: [1, 'cup'], g: 212 }
+          : item.name === 'Granulated sugar'
+            ? {...item, us: [2, 'tbsp'], g: 30 }
           : item.name === 'Semisweet or bittersweet chocolate'
             ? { ...item, us: [0.625, 'cup'], g: 105 }
             : { ...item },
