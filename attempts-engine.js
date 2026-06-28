@@ -86,7 +86,8 @@
     /* ---------- header ---------- */
     function renderHeader() {
       document.querySelector('#att-eyebrow').textContent =
-        category + ' \u00b7 ' + attempts.length + ' attempts & counting';
+        category + ' \u00b7 ' + attempts.length + ' ' +
+        (attempts.length === 1 ? 'attempt' : 'attempts') + ' & counting';
       document.querySelector('#att-title').textContent = recipeName;
       const open = document.querySelector('#open-recipe');
       open.href = linkFor(best);
@@ -115,7 +116,7 @@
       const stamp = el('div', 'attempt-stamp');
       stamp.append(el('span', 'attempt-badge', a.badge));
       const when = el('div');
-      when.append(el('div', 'when-label', 'Baked'));
+      when.append(el('div', 'when-label', a.dateLabel || 'Baked'));
       when.append(el('div', 'when-date', a.date));
       stamp.append(when);
       details.append(stamp);

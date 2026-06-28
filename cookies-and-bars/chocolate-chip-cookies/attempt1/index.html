@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../../../icon.png">
+  <title>Chocolate Chip Cookies | The Baking Adventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Caveat:wght@500;600;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <script src="../../../recipe-engine.js" defer></script>
+  <script src="../attempts-data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="page-content">
+      <header class="top-bar">
+        <span>
+          <a class="brand" href="../../../index.html">The Baking Adventures</a>
+          <span class="crumb-sep">/</span>
+          <a class="back-link" href="../../index.html">Cookies &amp; Bars</a>
+          <span class="crumb-sep">/</span>
+          <a class="back-link" href="../index.html">Chocolate Chip Cookies</a>
+          <span class="crumb-sep">/</span>
+          Attempt #1
+        </span>
+        <a class="back-link" href="../index.html">&larr; All attempts</a>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Cookies &amp; Bars</div>
+          <h1>Chocolate<br>Chip Cookies</h1>
+          <p class="intro">
+            Browned butter, crisp edges, chewy centers, and plenty of chocolate.
+            Based on <a class="link" href="https://bromabakery.com/best-chocolate-chip-cookies/">Broma Bakery&rsquo;s recipe</a>.
+          </p>
+          <dl class="recipe-meta">
+            <div><dt>Yield</dt><dd id="yield-label">15 cookies</dd></div>
+            <div><dt>Time</dt><dd id="recipe-time"></dd></div>
+            <div><dt>Level</dt><dd id="recipe-level"></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <figure class="photo-card hero-photo-card">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="no-photo">
+              <span class="np-icon">&#9634;</span>
+              <span>No photo yet</span>
+            </div>
+            <figcaption>first batch coming soon</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="recipe-layout">
+        <section class="ingredients">
+          <div class="section-heading ingredients-heading">
+            <h2>Ingredients</h2>
+            <div class="scaler" aria-label="Adjust yield">
+              <button class="scale-button scale-down" id="decrease-servings" type="button" aria-label="Decrease yield">−</button>
+              <span class="serving-count" id="serving-count">15</span>
+              <button class="scale-button scale-up" id="increase-servings" type="button" aria-label="Increase yield">+</button>
+            </div>
+          </div>
+
+          <div class="ingredient-controls">
+            <div class="unit-tabs">
+              <button id="unit-us" type="button" class="unit-tab is-active">US / Imperial</button>
+              <button id="unit-metric" type="button" class="unit-tab">Metric</button>
+            </div>
+            <button class="reset-button" id="reset-servings" type="button">reset</button>
+          </div>
+          <p class="unit-hint">Click any measured ingredient to switch just that row between US and metric.</p>
+          <div id="ingredient-list"></div>
+        </section>
+
+        <section class="method">
+          <div class="section-heading method-heading">
+            <h2>Method</h2>
+            <span class="progress-label" id="progress-label">0 / 6 done</span>
+          </div>
+          <div id="method-steps"></div>
+
+          <aside class="notes">
+            <h2>Recipe notes</h2>
+            <p>
+              For consistent dough, the source recipe targets about 140 g of butter after browning.
+              Add the flour gradually if the butter reduced further than expected, and pull the cookies
+              while their centers still look slightly underdone.
+            </p>
+          </aside>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

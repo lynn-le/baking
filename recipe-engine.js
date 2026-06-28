@@ -81,11 +81,9 @@
       return `${adjustedWhole || ''}${glyph}` || '0';
     }
 
-    function grams(value) {
-      if (value >= 100) return `${Math.round(value / 5) * 5} g`;
-      if (value >= 20) return `${Math.round(value)} g`;
+  function grams(value) {
       return `${Math.round(value * 10) / 10} g`;
-    }
+  }
 
     function milliliters(value) {
       if (value >= 100) return `${Math.round(value / 5) * 5} ml`;
