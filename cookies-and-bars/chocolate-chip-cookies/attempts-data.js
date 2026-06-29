@@ -7,7 +7,7 @@
     yieldLabel: 'cookies',
     baseServings: 15,
     time: '1 hr 31',
-    level: 'Intermediate',
+    level: 'Beginner',
     source: 'https://bromabakery.com/best-chocolate-chip-cookies/',
     ingredients: [
       { title: 'Cookie dough', items: [
@@ -43,7 +43,7 @@
           : item.name === 'Granulated sugar'
             ? {...item, us: [2, 'tbsp'], g: 30 }
           : item.name === 'Semisweet or bittersweet chocolate'
-            ? { ...item, us: [0.625, 'cup'], g: 105 }
+            ? { ...item, us: [0.81, 'cup'], g: 136 }
             : { ...item },
       ),
     })),
@@ -59,13 +59,13 @@
     ],
     attempts: [
       {
-        id: 1, badge: '#1', order: 1, rating: 0,
-        dateLabel: 'Status', date: 'Not baked yet', dateShort: 'Not baked yet',
+        id: 1, badge: '#1', order: 1, rating: 4,
+        date: 'June 29, 2026', dateShort: 'Jun 29, 2026',
         href: 'attempt1/index.html',
-        photo: null, caption: null,
-        tagline: 'recipe draft',
-        cardNote: 'The first batch is ready to bake.',
-        note: 'Recipe saved from Broma Bakery. Add the bake date, rating, photos, and notes after the first attempt.',
+        photo: 'attempt1/baked.jpeg', caption: 'fresh from the oven',
+        tagline: 'most recent bake',
+        cardNote: 'Slightly fluffy and crispy.',
+        note: 'Recipe saved from Broma Bakery. Ingredient ratio feels slighty off; not enough chocolate, a little sweet.',
         recipe: attempt1Recipe,
       },
     ],
