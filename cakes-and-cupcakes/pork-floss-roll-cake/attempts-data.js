@@ -20,15 +20,10 @@
         { name: 'Cake flour', us: [0.875, 'cup'], g: 110 },
         { name: 'Baking powder', us: [0.5, 'tsp'], g: 2 },
       ]},
-      { title: 'Cream filling', items: [
-        { name: 'Whipping cream, cold', us: [1.75, 'cups'], g: 400, liquid: true },
-        { name: 'Powdered sugar', us: [0.33, 'cup'], g: 40 },
-        { name: 'Vanilla extract', us: [1, 'tsp'], g: 5, liquid: true },
-        { name: 'Pork floss', us: [0.75, 'cup'], g: 80 },
-      ]},
-      { title: 'Exterior coating', items: [
-        { name: 'Mayonnaise', us: [2, 'tbsp'], g: 28 },
-        { name: 'Pork floss', us: [0.5, 'cup'], g: 60 },
+      { title: 'Filling Mixture', items: [
+        { name: 'Mayonnaise', us: [1.75, 'cups'], g: 400, liquid: true },
+        { name: 'Condensed Milk', us: [2.5, 'tbsp'], g: 38 },
+        { name: 'Pork floss', us: [0.75, 'cup'], g: 75 },
       ]},
     ],
     steps: [
@@ -50,10 +45,33 @@
     ],
   };
 
+  const attempt1ChiffonCake = {
+    title: 'Chiffon cake',
+    items: [
+      { name: 'Large eggs, room temperature', count: 6, countLabel: 'large' },
+      { name: 'Cream of tartar', us: [0.25, 'tsp'], g: 1 },
+      { name: 'Granulated sugar, divided into 85g + 40g', us: [0.625, 'cup'], g: 125 },
+      { name: 'Milk, dairy or non-dairy', us: [0.25, 'cup'], g: 45, liquid: true },
+      { name: 'Oil, e.g. canola oil', us: [0.25, 'cup'], g: 50, liquid: true },
+      { name: 'Vanilla extract', us: [2, 'tsp'], g: 10, liquid: true },
+      { name: 'Cake flour', us: [0.875, 'cup'], g: 110 },
+      { name: 'Baking powder', us: [0.5, 'tsp'], g: 2 },
+    ],
+  };
+
   const attempt1Recipe = {
     ...baseRecipe,
-    ingredients: baseRecipe.ingredients.map((section) => ({ ...section, items: [...section.items] })),
-    steps: [...baseRecipe.steps],
+    ingredients: [
+      attempt1ChiffonCake,
+      baseRecipe.ingredients[1],
+    ],
+    steps: Object.assign([...baseRecipe.steps], {
+      2: 'Egg white meringue: Add cream of tartar to the egg whites. Beat on low-medium speed until frothy. Add 85g of sugar one spoonful at a time, mixing between each addition. Increase to medium-high and beat to stiff peaks. Set aside.',
+      3: 'Egg yolk mixture: Add the remaining 40g of sugar to the egg yolks and mix until combined. Add the milk, oil, and vanilla extract and mix until smooth.',
+      10: 'Filling: Mix mayonnaise and condensed milk until well combined.',
+      11: 'Spread filling: Unroll the cooled cake. Spread the filling in a thick, even layer. Scatter the pork floss evenly over the filling.',
+      13: 'Coat exterior: Unwrap the chilled roll. Use a pastry brush or offset spatula to apply a thin, even layer of filling over the outside of the roll. Roll in pork floss to coat the exterior completely.',
+    }),
   };
 
   window.PorkFlossRollCake = {
@@ -65,13 +83,13 @@
     ],
     attempts: [
       {
-        id: 1, badge: '#1', order: 1, rating: null,
-        date: 'TBD', dateShort: 'TBD',
+        id: 1, badge: '#1', order: 1, rating: 4,
+        date: 'July 17, 2026', dateShort: 'Jul 17, 2026',
         href: 'attempt1/index.html',
         photo: 'attempt1/final.jpeg', caption: 'sliced and ready to serve',
         tagline: 'first attempt',
-        cardNote: '',
-        note: '',
+        cardNote: 'Home-made mayo and a dream.',
+        note: 'Ended up winging the fillings using a recipe my mom had for mayo. Mission failed successfully?',
         recipe: attempt1Recipe,
       },
     ],
