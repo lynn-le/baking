@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../../../icon.png">
+  <title>Pork Floss Roll Cake | The Baking Adventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Caveat:wght@500;600;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <script src="../../../recipe-engine.js" defer></script>
+  <script src="../attempts-data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="page-content">
+      <header class="top-bar">
+        <span>
+          <a class="brand" href="../../../index.html">The Baking Adventures</a>
+          <span class="crumb-sep">/</span>
+          <a class="back-link" href="../../index.html">Cakes &amp; Cupcakes</a>
+          <span class="crumb-sep">/</span>
+          <a class="back-link" href="../index.html">Pork Floss Roll Cake</a>
+          <span class="crumb-sep">/</span>
+          Attempt #1
+        </span>
+        <a class="back-link" href="../index.html">&larr; All attempts</a>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Cakes &amp; Cupcakes</div>
+          <h1>Pork Floss<br>Roll Cake</h1>
+          <p class="intro">
+            Light chiffon cake rolled with whipped cream and savory-sweet pork floss.
+            Adapted from <a class="link" href="https://teakandthyme.com/coffee-swiss-roll/">Teak &amp; Thyme&rsquo;s Coffee Swiss Roll</a>.
+          </p>
+          <dl class="recipe-meta">
+            <div><dt>Yield</dt><dd id="yield-label">8 slices</dd></div>
+            <div><dt>Time</dt><dd id="recipe-time"></dd></div>
+            <div><dt>Level</dt><dd id="recipe-level"></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <figure class="photo-card hero-photo-card">
+            <span class="tape" aria-hidden="true"></span>
+            <img class="hero-image" src="./final.jpeg" alt="Pork floss roll cake sliced on a green plate">
+            <figcaption>sliced and ready to serve</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="recipe-layout">
+        <section class="ingredients">
+          <div class="section-heading ingredients-heading">
+            <h2>Ingredients</h2>
+            <div class="scaler" aria-label="Adjust yield">
+              <button class="scale-button scale-down" id="decrease-servings" type="button" aria-label="Decrease yield">−</button>
+              <span class="serving-count" id="serving-count">8</span>
+              <button class="scale-button scale-up" id="increase-servings" type="button" aria-label="Increase yield">+</button>
+            </div>
+          </div>
+
+          <div class="ingredient-controls">
+            <div class="unit-tabs">
+              <button id="unit-us" type="button" class="unit-tab is-active">US / Imperial</button>
+              <button id="unit-metric" type="button" class="unit-tab">Metric</button>
+            </div>
+            <button class="reset-button" id="reset-servings" type="button">reset</button>
+          </div>
+          <p class="unit-hint">Click any measured ingredient to switch just that row between US and metric.</p>
+          <div id="ingredient-list"></div>
+
+          <section class="gallery" aria-labelledby="attempt1-gallery-heading">
+            <h2 id="attempt1-gallery-heading">Photo gallery</h2>
+            <div class="gallery-grid">
+              <figure class="photo-card gallery-card gallery-card-left">
+                <img class="gallery-image" src="./eggs-separated.jpeg" alt="Six egg yolks and whites separated into two bowls" loading="lazy">
+                <figcaption>yolks and whites separated</figcaption>
+              </figure>
+              <figure class="photo-card gallery-card gallery-card-right">
+                <img class="gallery-image" src="./batter.jpeg" alt="Chiffon batter after folding in the meringue" loading="lazy">
+                <figcaption>batter after folding in the meringue</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-grid" style="margin-top: 18px;">
+              <figure class="photo-card gallery-card gallery-card-left">
+                <img class="gallery-image" src="./prebake.jpeg" alt="Batter spread evenly in the baking tray" loading="lazy" style="height: auto; width: 100%;">
+                <figcaption>batter spread in the tray</figcaption>
+              </figure>
+              <figure class="photo-card gallery-card gallery-card-right">
+                <img class="gallery-image" src="./postbake.jpeg" alt="Golden puffed chiffon cake sheet fresh from the oven" loading="lazy" style="height: auto; width: 100%;">
+                <figcaption>just out of the oven</figcaption>
+              </figure>
+            </div>
+            <div class="gallery-grid gallery-grid-vertical" style="margin-top: 18px;">
+              <figure class="photo-card gallery-card gallery-card-left">
+                <img class="gallery-image" src="./rolled.jpeg" alt="Trimming the ends of the roll cake to reveal the cream swirl" loading="lazy">
+                <figcaption>trimming to reveal the swirl</figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+
+        <section class="method">
+          <div class="section-heading method-heading">
+            <h2>Method</h2>
+            <span class="progress-label" id="progress-label">0 / 15 done</span>
+          </div>
+          <div id="method-steps"></div>
+
+          <aside class="notes">
+            <h2>Recipe notes</h2>
+            <p>No notes yet &mdash; add some after your first bake!</p>
+          </aside>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

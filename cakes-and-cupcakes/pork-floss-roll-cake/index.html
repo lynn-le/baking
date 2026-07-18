@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../../icon.png">
+  <title>Pork Floss Roll Cake · Attempts | The Baking Adventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Caveat:wght@500;600;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../attempts-engine.js" defer></script>
+  <script src="./attempts-data.js" defer></script>
+  <script src="./attempts.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="page-content">
+      <header class="top-bar">
+        <span id="crumb"></span>
+        <a class="back-link" id="back-link" href="../index.html">&larr; Back</a>
+      </header>
+
+      <section class="attempts-header">
+        <div>
+          <div class="eyebrow" id="att-eyebrow"></div>
+          <h1 id="att-title"></h1>
+        </div>
+        <a class="open-recipe" id="open-recipe" href="#"></a>
+      </section>
+
+      <section>
+        <div class="section-label-row">
+          <span class="section-label">Most recent attempt</span>
+          <span class="rule"></span>
+        </div>
+        <a class="featured" id="featured" href="#"></a>
+      </section>
+
+      <section>
+        <div class="section-label-row spaced">
+          <span class="section-label">Every attempt</span>
+          <span class="rule"></span>
+          <div class="sort-control">
+            <button class="sort-button" id="sort-button" type="button">
+              <span class="lbl-key">Sort</span>
+              <span id="sort-label">Latest first</span>
+              <span class="caret" id="sort-caret">&#9660;</span>
+            </button>
+            <div class="sort-menu" id="sort-menu" hidden></div>
+          </div>
+        </div>
+        <div class="attempt-grid" id="attempt-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="sort-backdrop" id="sort-backdrop" hidden></div>
+</body>
+</html>
